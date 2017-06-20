@@ -6,8 +6,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
 
-asdf
-
 /** 
  * Main entry point for computing an allocation. The
  * <code>computeAllocation</code> method computes and allocation,
