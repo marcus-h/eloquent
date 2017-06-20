@@ -2,8 +2,6 @@ import InputHelper;
 import Specification2ILP;
 import SolverConstants;
 
-import org.muml.common._blackbox.SaveXMIBlackbox;
-
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
@@ -21,9 +19,6 @@ helper computeAllocation() {
 	log("ret: " + ret.toString());
 	assert fatal (ret.succeeded()) with log("Specification2ILP transformation failed: " + ret.toString());
 	var ilpModel : IntegerLinearProgram := ilpOut.rootObjects()![IntegerLinearProgram];
-	if (STORE_ILP_MODEL) then {
-		save(ilpModel->asBag(), "ILP Model", "ilp.lp");
-	} endif;
 	createAllocation(ilpModel);
 }
 
