@@ -69,9 +69,6 @@
       <import plugin="org.eclipse.ui" version="3.108.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ocl.pivot" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.m2m.qvt.oml.runtime" version="3.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtend.lib" version="2.7.2" match="greaterOrEqual"/>
-      <import plugin="org.muml.external.opt4j"/>
-      <import plugin="org.muml.external.guice"/>
    </requires>
 
    <plugin
@@ -146,27 +143,6 @@
 
    <plugin
          id="org.muml.psm.allocation.algorithm.ilp"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.muml.psm.allocation.algorithm.ilp.opt4j"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
