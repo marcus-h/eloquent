@@ -36,7 +36,7 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 				typeof(ExpressionInOCL),
 				csElement.getExpression()
 			)
-			context.refreshContextVariable(expressionInOCL)
+			context.refreshContextVariable(csElement, expressionInOCL)
 			null
 		}
 		

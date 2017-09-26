@@ -5,6 +5,7 @@ import org.eclipse.ocl.pivot.ExpressionInOCL
 import org.eclipse.ocl.pivot.utilities.PivotConstants
 import org.eclipse.ocl.xtext.base.cs2as.CS2AS
 import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion
+import org.eclipse.ocl.xtext.basecs.ElementCS
 import org.eclipse.xtext.diagnostics.IDiagnosticConsumer
 import org.muml.psm.allocation.language.^as.Specification
 
@@ -14,7 +15,9 @@ class SpecificationCS2PivotConversion extends CS2ASConversion {
 		super(converter, diagnosticsConsumer)
 	}
 			
-	override public void refreshContextVariable(/*@NonNull*/ ExpressionInOCL pivotSpecification) {
+	override public void refreshContextVariable(/*@NonNull*/ ElementCS csElement,
+		/*@NonNull*/ ExpressionInOCL pivotSpecification
+	) {
 		var Specification specification
 		if (pivotSpecification.eContainer != null
 			&& pivotSpecification.eContainer.eContainer != null
@@ -34,7 +37,7 @@ class SpecificationCS2PivotConversion extends CS2ASConversion {
 				specification.oclContext.type, null
 			)
 		} else {
-			super.refreshContextVariable(pivotSpecification)
+			super.refreshContextVariable(csElement, pivotSpecification)
 		}
 	}
 }
