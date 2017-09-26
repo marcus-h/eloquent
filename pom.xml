@@ -236,5 +236,10 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/eclipse/updates/4.7</url>
 		</repository>
+        <repository>
+            <id>eclipse-ocl522502</id>
+            <layout>p2</layout>
+            <url>https://hudson.eclipse.org/ocl/job/buckminster-ocl-branch-tests/lastSuccessfulBuild/artifact/MDT-OCL.p2.repository</url>
+        </repository>
     </repositories>
 </project>
